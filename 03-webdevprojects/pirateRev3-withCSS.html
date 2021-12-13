@@ -1,0 +1,214 @@
+<!--doctype html -->
+<!-- pirate.html                    Dave Reed -->
+<!-- Simple page that translates words/phrases from      -->
+<!-- English to pirate at the click of a button.         -->
+<!-- Modifications by Caleb Hurbon 11/30/2021            -->
+<!-- =================================================== -->
+
+<html>
+	<head>
+		<title> Pirate Translator Exercise 3</title>
+
+	</head>
+
+<!-- ********************************************** -->
+<!-- Begin code complied by Dr. OC 12/9/2021 -->
+<!-- The following code uses CSS to creat a page class in which onmouseover/out can change the background image of the page -->
+<!--*********************************************** -->
+   <style>
+      body 
+      {
+       background-image: url('art-ship.jpg');
+       background-repeat: no-repeat;
+       background-attachment: fixed;
+       background-size: cover;
+       color:white;
+       }
+      .carb1 
+      {
+       background-image: url('art-ship.jpg');
+       background-repeat: no-repeat;
+       background-attachment: fixed;
+       background-size: cover;
+       color:white;
+       }
+      .carb2 
+      {
+       background-image: url('img-ship.jpg');
+       background-repeat: no-repeat;
+       background-attachment: fixed;
+       background-size: cover;
+       color:white;
+       }
+</style>
+ </head>
+
+ <body id="bgImg">
+      <div style="text-align:center">
+         <img src='pirate-354246_1280.png' alt="Pirate image 1"
+          onmouseover="document.getElementById('bgImg').className='carb2'";
+          onmouseout="document.getElementById('bgImg').className='carb1' ";>
+       </div>
+
+<!-- ******************************************* -->
+<!-- END CODE CREATED BY DR OC -->
+
+
+		<h3>Land Lubber's Pirate Translator</h3>
+		<p>Simply click on the buttons to translate words and/or phrases from English to pirate talk.
+
+			<input type="button" value="Clear Translation"
+				onclick="document.getElementById('outputDiv').innerHTML = ' ';">
+
+			<input type="button" value="Disable music"
+				onclick="document.getElementById('musicDiv').innerHTML = ' ';">
+
+			<a href="pirateRev3-withCSS.html">
+			<input type="button" value="Refresh to enable music">
+			</a>
+
+
+			<input type="button" value="Back"
+				onclick="window.location.href='../03-webdevprojects.html'";>
+
+
+<br>
+			<i>If music does not automatically play, switch to Internet Explorer mode.
+<br>
+			Sunset ship found at:<a style="color:white" href="https://www.pixelstalk.net/pirate-desktop-wallpapers/">Pixelstalk.net</a>. All other images in creative commons.</i>
+
+		</p>
+		<p>
+			<table>
+				<tr>
+					<td>
+						Greetings:
+						<input type="button" value="Hello"
+							onclick="document.getElementById('outputDiv').innerHTML=
+								 document.getElementById('outputDiv').innerHTML + 'Ahoy ';">
+
+						<input type="button" value="Pardon me"
+							onclick="document.getElementById('outputDiv').innerHTML =
+								 document.getElementById('outputDiv').innerHTML + 'Avast ';">
+
+						<input type="button" value="Excuse me"
+							onclick="document.getElementById('outputDiv').innerHTML =
+								 document.getElementById('outputDiv').innerHTML + 'Arrr ';">
+
+						</p><p>
+
+						People:
+						<input type="button" value="sir"
+							onclick="document.getElementById('outputDiv').innerHTML =
+								 document.getElementById('outputDiv').innerHTML + 'matey ';">
+
+						<input type="button" value="madam"
+							onclick="document.getElementById('outputDiv').innerHTML =
+								 document.getElementById('outputDiv').innerHTML + 'proud beauty ';">
+
+						<input type="button" value="stranger"
+							onclick="document.getElementById('outputDiv').innerHTML =
+								 document.getElementById('outputDiv').innerHTML + 'scurvy dog ';">
+
+						<input type="button" value="officer"
+							onclick="document.getElementById('outputDiv').innerHTML =
+								 document.getElementById('outputDiv').innerHTML + 'foul blaggart ';">
+
+						</p><p>
+
+						Questions:
+						<input type="button" value="where is"
+							onclick="document.getElementById('outputDiv').innerHTML =
+								 document.getElementById('outputDiv').innerHTML + 'whar be ';">
+
+						<input type="button" value="can you help me find"
+							onclick="document.getElementById('outputDiv').innerHTML =
+								 document.getElementById('outputDiv').innerHTML + 'know ye ';">
+
+						<input type="button" value="how far is it to"
+							onclick="document.getElementById('outputDiv').innerHTML =
+								 document.getElementById('outputDiv').innerHTML + 'how many leagues to ';">
+	
+						<input type="button" value="is that"
+							onclick="document.getElementById('outputDiv').innerHTML =
+								 document.getElementById('outputDiv').innerHTML + 'be that ';">
+
+						</p><p>
+
+						Articles:
+						<input type="button" value="the"
+							onclick="document.getElementById('outputDiv').innerHTML =
+								 document.getElementById('outputDiv').innerHTML + 'th\' ';">
+
+						<input type="button" value="nearby"
+							onclick="document.getElementById('outputDiv').innerHTML =
+								 document.getElementById('outputDiv').innerHTML + 'broadside ';">
+	
+						<input type="button" value="my"
+							onclick="document.getElementById('outputDiv').innerHTML =
+								 document.getElementById('outputDiv').innerHTML + 'me ';">
+	
+						<input type="button" value="your"
+							onclick="document.getElementById('outputDiv').innerHTML =
+								 document.getElementById('outputDiv').innerHTML + 'yer ';">
+
+						</p><p>
+
+						Places:
+						<input type="button" value="restroom"
+							onclick="document.getElementById('outputDiv').innerHTML =
+								 document.getElementById('outputDiv').innerHTML + 'head? ';">
+
+						<input type="button" value="restaurant"
+							onclick="document.getElementById('outputDiv').innerHTML =
+								 document.getElementById('outputDiv').innerHTML + 'galley? ';">
+
+						<input type="button" value="hotel"
+							onclick="document.getElementById('outputDiv').innerHTML =
+								 document.getElementById('outputDiv').innerHTML + 'fleabag inn? ';">
+
+						<input type="button" value="bank"
+							onclick="document.getElementById('outputDiv').innerHTML =
+								 document.getElementById('outputDiv').innerHTML + 'buried treasure? ';">
+						</p>
+						<p>
+
+
+						</p>
+
+					</td>
+				
+					<td>
+						&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+						&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<!--						<img src="pirate-354246_1280.png" height="100" width="151.5"
+							onmouseover="this.src='art-1638309393473-9649.jpg';"
+							onmouseout="this.src='pirate-354246_1280.png';">
+-->						&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+						&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+					</td>
+
+					<td>
+						<div id="outputDiv"> </div>
+					</td>
+
+				</tr>
+			</table>
+<hr>
+
+<p>&nbsp</p>
+<p>DISCLAIMER: These are not the actual meanings of these words. Avast is an order to stop.</p>
+<p>DISCLAIMER: Music by Sea of Theives</p>
+
+<p>
+	<div id="musicDiv">
+	<audio autoplay loop>
+	  <source src="yo-ho.mp3" type="audio/mpeg">
+	</audio>
+	</div>
+
+</p>
+
+
+ </body>
+</html>

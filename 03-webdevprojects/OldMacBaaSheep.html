@@ -1,0 +1,119 @@
+<!doctype html>
+<!-- oldmac.html                                       Caleb Hurbon-->
+<!-- This page inserts a user selected variable into a text portion of the page. -->
+<!-- ============================================================= -->
+
+<!-- REMEBER!! parseFloat is tricky-->
+<!-- REMEBER!! style="text-align:center" under <td> to center text and item inside table -->
+
+<!-- This will give regular and funny versiona of old mac donald-->
+
+<!-- Edits by Caleb Hurbon on 11/11/2021-->
+
+
+
+<html>
+	<head>
+		<title> Old Mac Donald Generator </title>
+		<script type="text/javascript">
+
+			function OldMacVerse(animal, sound) 
+			// Assumes: animal is the name of an animal, sound is the sound it makes
+			// Results: displays a verse of the song "Old MacDonald had a Farm" in outputDiv
+				{
+			document.getElementById('outputDiv').innerHTML =
+				document.getElementById('outputDiv').innerHTML +
+				'<p>Old MacDonald had a farm, E-I-E-I-O.<br>' + 
+				'And on that farm he had a ' + animal + ', E-I-E-I-O.<br>' + 
+				'With a ' + sound + '-' + sound + ' here, and a ' + sound + '-' + sound + 
+				' there,<br>' + ' here a ' + sound + ', there a ' + sound + 
+				', everywhere a ' + sound + '-' + sound + '.<br>' + 
+				'Old MacDonald had a farm, E-I-E-I-O.</p>';
+				}
+
+		</script>
+		<script type="text/javascript">
+
+			function VerseMacOld(animal, sound) 
+			// Assumes: animal is the name of an animal, sound is the sound it makes
+			// Results: displays a verse of the song "Old MacDonald had a Farm" in outputDiv
+				{
+			document.getElementById('outputDiv2').innerHTML =
+				document.getElementById('outputDiv2').innerHTML +
+				'<p>Old MacDonald was <b>Dyslexic, O-I-E-I-E</b>.<br>' + 
+				'And on his farm he had a <b>' + animal + '</b>, <b>O-I-E-I-E</b>.<br>' + 
+				'With a <b>' + sound + '-' + sound + '</b> here, and a <b>' + sound + '-' + sound + 
+				'</b> there,<br>' + ' here a <b>' + sound + '</b>, there a <b>' + sound + 
+				'</b>, everywhere a <b>' + sound + '-' + sound + '</b>.<br>' + 
+				'Old MacDonald was <b>Dyslexic, <b>O-I-E-I-E.</b></p>';
+				}
+
+		</script>
+
+
+
+
+	</head>
+<!-- ****************************************************************************** -->
+	<body>
+
+			<h1 style="text-align:center">Old MacDonald's Farm Generator</h1>
+			<p>
+			</p>
+			<p><input type="button" value="Back"
+				onclick="window.location.href='../03-webdevprojects.html'";>
+			</p>
+	<table>
+		<tr>
+			<td>
+
+				<h3>Regular</h3>
+				<input type="button" value="cow"
+					onclick="OldMacVerse('COW','MOO')">
+				<input type="button" value="sheep"
+					onclick="OldMacVerse('SHEEP','BAAH')">
+				<input type="button" value="pig"
+					onclick="OldMacVerse('PIG','OINK')">
+				<input type="button" value="chicken"
+					onclick="OldMacVerse('CHICKEN','CLUCK')">
+
+				<p>
+				</p>
+				<p>
+				</p>
+
+
+				<h3>Dyslexia</h3>
+				<input type="button" value="cow"
+					onclick="VerseMacOld('MOO','COW')">
+				<input type="button" value="sheep"
+					onclick="VerseMacOld('BAAH','SHEEP')">
+				<input type="button" value="pig"
+					onclick="VerseMacOld('OINK','PIG')">
+				<input type="button" value="chicken"
+					onclick="VerseMacOld('CLUCK','CHICKEN')">
+			</td>
+
+			<td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+
+			<td style="text-align:center">
+					<input type="button" value="Reset"
+						onclick="document.getElementById('outputDiv').innerHTML='<big><b>Choose your words and sing the song!</b></big>'";>
+				<div id="outputDiv"><big><b>Choose your words and sing the song!</b></big></div>
+			</td>
+
+			<td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+
+			<td style="text-align:center">
+					<input type="button" value="Reset"
+						onclick="document.getElementById('outputDiv2').innerHTML='<big><b>Choose your words and sing the song!</b></big>'";>
+				<div id="outputDiv2"><big><b>Choose your words and sing the song!</b></big></div>
+			</td>
+
+
+		</tr>
+	</table>
+<hr>
+	</body>
+
+</html>

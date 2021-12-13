@@ -1,0 +1,248 @@
+
+<!doctype html>
+<!-- NoCreditNoPlayslots.html   Dr. OC-->
+<!doctype html>
+<!-- NoCreditNoPlaySlots.html Dr. O'C  -->
+<!-- This page simulates a simple slot machine with 3 slots. -->
+<!-- add test for out of credits -->
+<!-- ======================================================= -->
+
+<!-- I added 6 more slots so the player can choose how many to spin -->
+<!-- more slots == smaller odds == greater pay out -->
+<!-- bar gives 1 credit -->
+<!-- Accross the board match gives coresponding rewards-->
+
+
+
+
+
+
+<html>
+	<head>
+		<title> Slot Machine  No CreditNoPlay</title>
+		<script type="text/javascript" src="ImagesForHTMLandJS/random.js">
+		</script>
+		<script type="text/javascript">
+			function SpinSlots()
+			// Assumes: slot images are in ImagesForHTMLandJS/
+			// Results: displays 3 random slot images
+			{
+      			var slot1, slot2, slot3,currentCredit;
+      			var creditAllThree, creditOneBar;
+			// RandomOnOf was user in lab 12 - randSeqUserInput.html
+			   slot1 = RandomOneOf(['lemon', 'cherry', 'bar', 'donut']);
+			   slot2 = RandomOneOf(['lemon', 'cherry', 'bar', 'donut']);
+			   slot3 = RandomOneOf(['lemon', 'cherry', 'bar', 'donut']);
+
+			   document.getElementById('slot1Img').src = 'ImagesForHTMLandJS/' + slot1 + '.jpg';
+			   document.getElementById('slot2Img').src = 'ImagesForHTMLandJS/' + slot2 + '.jpg';
+			   document.getElementById('slot3Img').src = 'ImagesForHTMLandJS/' + slot3 + '.jpg';
+
+       			currentCredit= parseFloat(document.getElementById('creditBox').value) - 1;
+       			document.getElementById('creditBox').value =  currentCredit;
+
+				//  plyaer gets a credit of 13 when all three images are the same
+       			if (slot1 == slot2 && slot2 == slot3)
+				{
+         			creditAllThree = 13
+         			document.getElementById('creditBox').value =
+        			parseFloat(document.getElementById('creditBox').value) + creditAllThree ;
+        			alert('Congratulations - you win!' + creditAllThree );
+       			}
+
+       			else if (slot1 == 'bar' || slot2 == 'bar' || slot3 == 'bar')
+				{
+         			creditOneBar = 1
+         			document.getElementById('creditBox').value =
+        			parseFloat(document.getElementById('creditBox').value) + creditOneBar ;
+        			alert('Congratulations - you win!' + creditOneBar );
+       			}
+
+			
+
+      		}
+
+			function SpinMoreSlots()
+			// Assumes: slot images are in ImagesForHTMLandJS/
+			// Results: displays 5 random slot images
+			{
+      			var slot1, slot2, slot3, slot4, slot5, currentCredit;
+      			var creditAllFive;
+			// RandomOnOf was user in lab 12 - randSeqUserInput.html
+			   slot1 = RandomOneOf(['lemon', 'cherry', 'bar', 'donut']);
+			   slot2 = RandomOneOf(['lemon', 'cherry', 'bar', 'donut']);
+			   slot3 = RandomOneOf(['lemon', 'cherry', 'bar', 'donut']);
+			   slot4 = RandomOneOf(['lemon', 'cherry', 'bar', 'donut']);
+			   slot5 = RandomOneOf(['lemon', 'cherry', 'bar', 'donut']);
+
+			   document.getElementById('slot1Img').src = 'ImagesForHTMLandJS/' + slot1 + '.jpg';
+			   document.getElementById('slot2Img').src = 'ImagesForHTMLandJS/' + slot2 + '.jpg';
+			   document.getElementById('slot3Img').src = 'ImagesForHTMLandJS/' + slot3 + '.jpg';
+			   document.getElementById('slot4Img').src = 'ImagesForHTMLandJS/' + slot4 + '.jpg';
+			   document.getElementById('slot5Img').src = 'ImagesForHTMLandJS/' + slot5 + '.jpg';
+
+       			currentCredit= parseFloat(document.getElementById('creditBox').value) - 1;
+       			document.getElementById('creditBox').value =  currentCredit;
+
+				//  plyaer gets a credit of 50 when all three images are the same
+       			if (slot1 == slot2 && slot2 == slot3 && slot3 == slot4 && slot4 == slot5)
+				{
+         			creditAllFive = 50
+         			document.getElementById('creditBox').value =
+        			parseFloat(document.getElementById('creditBox').value) + creditAllFive ;
+        			alert('Congratulations - you win!' + creditAllFive );
+       			}
+       			else if (slot1 && slot2 == 'bar'|| slot2 && slot3 == 'bar' || slot3 && slot4 == 'bar' || slot4 && slot5 == 'bar' || slot5 && slot1 == 'bar')
+				{
+         			creditOneBar = 1
+         			document.getElementById('creditBox').value =
+        			parseFloat(document.getElementById('creditBox').value) + creditOneBar ;
+        			alert('Congratulations - you win!' + creditOneBar );
+       			}
+
+      		}
+
+
+
+			function SpinAllSlots()
+			// Assumes: slot images are in ImagesForHTMLandJS/
+			// Results: displays 9 random slot images
+			{
+      			var slot1, slot2, slot3, slot4, slot5, slot6, slot7, slot8, slot9, currentCredit;
+      			var creditAllNine;
+			// RandomOnOf was user in lab 12 - randSeqUserInput.html
+			   slot1 = RandomOneOf(['cherry', 'bar']);
+			   slot2 = RandomOneOf(['cherry', 'bar']);
+			   slot3 = RandomOneOf(['cherry', 'bar']);
+			   slot4 = RandomOneOf(['cherry', 'bar']);
+			   slot5 = RandomOneOf(['cherry', 'bar']);
+			   slot6 = RandomOneOf(['cherry', 'bar']);
+			   slot7 = RandomOneOf(['cherry', 'bar']);
+			   slot8 = RandomOneOf(['cherry', 'bar']);
+			   slot9 = RandomOneOf(['cherry', 'bar']);
+
+			   document.getElementById('slot1Img').src = 'ImagesForHTMLandJS/' + slot1 + '.jpg';
+			   document.getElementById('slot2Img').src = 'ImagesForHTMLandJS/' + slot2 + '.jpg';
+			   document.getElementById('slot3Img').src = 'ImagesForHTMLandJS/' + slot3 + '.jpg';
+			   document.getElementById('slot4Img').src = 'ImagesForHTMLandJS/' + slot4 + '.jpg';
+			   document.getElementById('slot5Img').src = 'ImagesForHTMLandJS/' + slot5 + '.jpg';
+			   document.getElementById('slot6Img').src = 'ImagesForHTMLandJS/' + slot6 + '.jpg';
+			   document.getElementById('slot7Img').src = 'ImagesForHTMLandJS/' + slot7 + '.jpg';
+			   document.getElementById('slot8Img').src = 'ImagesForHTMLandJS/' + slot8 + '.jpg';
+			   document.getElementById('slot9Img').src = 'ImagesForHTMLandJS/' + slot9 + '.jpg';
+
+       			currentCredit= parseFloat(document.getElementById('creditBox').value) - 1;
+       			document.getElementById('creditBox').value =  currentCredit;
+
+				//  plyaer gets a credit of 1000 when all three images are the same
+       			if (slot1 == slot2 && slot2 == slot3 && slot3 == slot4 && slot4 == slot5 && slot5 == slot6 && slot6 == slot7 && slot7 == slot8 && slot8 == slot9)
+				{
+         			creditAllNine = 1000
+         			document.getElementById('creditBox').value =
+        			parseFloat(document.getElementById('creditBox').value) + creditAllNine ;
+        			alert('Congratulations - you win!' + creditAllNine );
+       			}
+
+      		}
+
+
+
+   		 </script>
+  </head>
+
+  <body>
+    <div style="text-align:center">
+      <p>
+        <img id="slot9Img" border=1 alt="slot image" src="ImagesForHTMLandJS/bar.jpg">
+        <img id="slot7Img" border=1 alt="slot image" src="ImagesForHTMLandJS/bar.jpg">
+        <img id="slot5Img" border=1 alt="slot image" src="ImagesForHTMLandJS/bar.jpg">
+        <img id="slot1Img" border=1 alt="slot image" src="ImagesForHTMLandJS/cherry.jpg">
+        <img id="slot2Img" border=1 alt="slot image" src="ImagesForHTMLandJS/lemon.jpg">
+        <img id="slot3Img" border=1 alt="slot image" src="ImagesForHTMLandJS/bar.jpg">
+        <img id="slot4Img" border=1 alt="slot image" src="ImagesForHTMLandJS/bar.jpg">
+        <img id="slot6Img" border=1 alt="slot image" src="ImagesForHTMLandJS/bar.jpg">
+        <img id="slot8Img" border=1 alt="slot image" src="ImagesForHTMLandJS/bar.jpg">
+
+
+
+     </p>
+<!-- add test for out of credits -->
+       <input type="button" value="Click to Spin 3"
+       onclick= "
+         if (parseFloat(document.getElementById('creditBox').value) >0 ) {
+             SpinSlots();
+          }
+         else {
+           alert('Zero credits remaining. To continue playing, enter more credit !');
+          }
+          ">
+	
+	<input type="button" value="Click to Spin 5"
+	onclick="
+         if (parseFloat(document.getElementById('creditBox').value) >0 ) {
+             SpinMoreSlots();
+          }
+         else {
+           alert('Zero credits remaining. To continue playing, enter more credit !');
+          }
+          ">
+
+
+	<input type="button" value="Click to Spin All!"
+	onclick="
+         if (parseFloat(document.getElementById('creditBox').value) >0 ) {
+             SpinAllSlots();
+          }
+         else {
+           alert('Zero credits remaining. To continue playing, enter more credit !');
+          }
+          ">
+
+
+
+     <p>
+       Credits: <input type="text" id="creditBox" size=6 value=5>
+     </p>
+     <p>
+	<table>
+		<tr>
+			<td>&nbsp    &nbsp&nbsp</td>
+			<td>Spin 3   &nbsp&nbsp</td>
+			<td>Spin 5   &nbsp&nbsp</td>
+			<td>Spin All &nbsp&nbsp</td>
+		</tr>
+		<tr>
+			<td>Cost:    &nbsp&nbsp</td>
+			<td>1 credit &nbsp&nbsp</td>
+			<td>1 credit &nbsp&nbsp</td>
+			<td>1 credit &nbsp&nbsp</td>
+		</tr>
+		<tr>
+			<td>Payout (All slots spun must match): &nbsp&nbsp</td>
+			<td>13 credits                          &nbsp&nbsp</td>
+			<td>50 credits                          &nbsp&nbsp</td>
+			<td>1000 credits                        &nbsp&nbsp</td>
+		</tr>
+		<tr>
+			<td>Odds:     &nbsp&nbsp</td>
+			<td>1/16      &nbsp&nbsp</td>
+			<td>1/256     &nbsp&nbsp</td>
+			<td>1/131072  &nbsp&nbsp</td>
+		</tr>
+		<tr>
+		</tr>
+		<tr>
+			<td>Bar Payout: &nbsp&nbsp</td>
+			<td>1 credit    &nbsp&nbsp</td>
+			<td>(2 Bar) 1 credit    &nbsp&nbsp</td>
+			<td>No credit    &nbsp&nbsp</td>
+
+	</table>
+
+     </p>
+
+	
+
+    </div>
+  </body>
+</html>
